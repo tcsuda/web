@@ -2,9 +2,9 @@ from fastapi import FastAPI
 
 app = FastAPI()
 
-@app.route('/{test}')
-async def test(test):
-    return {'hello': test}
+@app.get('/{name}')
+async def test(name):
+    return {'hello': name}
 
 if __name__ == '__main__':
     import uvicorn
